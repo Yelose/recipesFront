@@ -1,0 +1,25 @@
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input type="number" matInput />
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Units</mat-label>
+    <input matInput />
+  </mat-form-field>
+  <mat-radio-group [color]="colorChosen" aria-label="Select a color">
+    <mat-radio-button (change)="colorChosen = 'primary'" value="primary"
+      >Primary</mat-radio-button
+    >
+    <mat-radio-button (change)="colorChosen = 'accent'" value="accent"
+      >Accent</mat-radio-button
+    >
+    <mat-radio-button (change)="colorChosen = 'warn'" value="warn"
+      >Warn</mat-radio-button
+    >
+  </mat-radio-group>
+</form>

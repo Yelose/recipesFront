@@ -1,0 +1,26 @@
+<section class="example-section">
+  <span class="example-list-section">
+    <mat-checkbox
+      class="example-margin"
+      [checked]="allComplete"
+      [color]="task.color"
+      [indeterminate]="someComplete()"
+      (change)="setAll($event.checked)"
+    >
+      {{ task.name }}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+      <li *ngFor="let ingredient of task.ingredients">
+        <mat-checkbox
+          [(ngModel)]="ingredient.completed"
+          [color]="ingredient.color"
+          (ngModelChange)="updateAllComplete()"
+        >
+          {{ ingredient.name }} ({{ ingredient.amount }}{{ ingredient.units }})
+        </mat-checkbox>
+      </li>
+    </ul>
+  </span>
+</section>
